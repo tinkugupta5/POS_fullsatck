@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -35,16 +35,16 @@ export default class DefaultLayout extends React.Component {
           <Menu theme="dark"  mode="inline"  defaultSelectedKeys={window.location.pathname}  >
                                       
             <Menu.Item key="/" icon={<HomeOutlined />}>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </Menu.Item>
             <Menu.Item key="/bills" icon={<CopyOutlined />}>
-              <Link to="/bills">Bills</Link>
+              <NavLink to="/bills">Bills</NavLink>
             </Menu.Item>
             <Menu.Item key="/items" icon={<UnorderedListOutlined />}>
-              <Link to="/items">Items</Link>
+              <NavLink to="/items">Items</NavLink>
             </Menu.Item>
             <Menu.Item key="/customers" icon={<UserOutlined />}>
-              <Link to="/customers">Cutomers</Link>
+              <NavLink to="/customers">Cutomers</NavLink>
             </Menu.Item>
             <Menu.Item key="/logout" icon={<LogoutOutlined />}>
               Logout

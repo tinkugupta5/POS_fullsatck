@@ -14,7 +14,6 @@ dotanv.config()
 connectDB();
 
 // rest object
-
 const app = express();
 
 // middlwares

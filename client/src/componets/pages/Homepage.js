@@ -5,24 +5,21 @@ import { Col, Row } from 'antd';
 import ItemList from './ItemList';
 
 const Homepage = () => {
+  // define state 
   const [itemsData,setItemData] = useState([])
 
 
+  // call api by using use effect
   useEffect(()=>{
-
     const getAllItems = async() => {
-
       try {
         const {data} = await axios.get('/api/items/get-item')
         setItemData(data);
         console.log(data);
-        
-      } catch (error) {
-
+      } 
+      catch (error) {
         console.log(error)
-        
       }
-
     }
 
     getAllItems();

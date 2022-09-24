@@ -17,6 +17,7 @@ const { Header, Sider, Content } = Layout;
 const  DefaultLayout = ({children})=> {
 
   const [collapsed,setCollapsed] = useState(false)
+  //change class based component to functional components
   // state = {
   //   collapsed: false,
   // };

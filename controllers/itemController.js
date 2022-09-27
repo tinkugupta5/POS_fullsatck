@@ -4,16 +4,11 @@ const itemModel = require('../models/itemModel')
 //get items 
  const getItemController = async(req,res) => {
     try {
-
-
         //we recieve items 
         const items = await itemModel.find()
         res.status(200).send(items) // here we send this items value which we get  an we send it to response
-        
     } catch (error) {
-
         console.log(error)
-        
     }
 } ;
 
@@ -25,7 +20,6 @@ const itemModel = require('../models/itemModel')
 const addItemController = async(req,res) => {
 
     try {
-
         // const post = await itemModel.
         const newItem = new itemModel(req.body)
         //await kiska karna hai new item ko save karanei ka 

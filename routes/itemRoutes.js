@@ -11,7 +11,5 @@ const router = express.Router()
 router.get('/get-item',getItemController)
 
 //method - POST
-
 router.post('/add-item',addItemController);
-
 module.exports =  router 

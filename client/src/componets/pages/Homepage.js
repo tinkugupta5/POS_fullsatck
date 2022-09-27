@@ -38,7 +38,7 @@ const Homepage = () => {
         }
       </Row>
     </DefaultLayout>
-  )
+  ) 
 }
 
 export default Homepage

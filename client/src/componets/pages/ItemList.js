@@ -14,7 +14,7 @@ const ItemList = ({item}) => {
     
   >
     <Meta title={item.name} description="" />
-    <div className='item-button'>
+    <div class='item-button'>
     <Button>Add to cart</Button>
     </div>
   </Card>
@@ -23,3 +23,4 @@ const ItemList = ({item}) => {
 }
 
 export default ItemList
+

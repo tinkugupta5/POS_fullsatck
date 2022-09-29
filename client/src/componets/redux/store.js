@@ -14,13 +14,13 @@ const intialState = {
          :[],
     },
 };
+
 const middleware = [thunk];
     
 const store = createStore(finalReducer,
     intialState,
     composeWithDevTools(applyMiddleware(...middleware))
     );
-
 
 
 export default store

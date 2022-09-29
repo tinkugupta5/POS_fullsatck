@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
+import { useSelector } from "react-redux";
 import { Layout, Menu } from "antd";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { rootReducer } from './redux/rootReducer';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -10,12 +11,15 @@ import {
   HomeOutlined,
   CopyOutlined,
   UnorderedListOutlined,
+  ShoppingCartOutlined
 } from "@ant-design/icons";
 import "../styles/DefaultLayout.css";
+
 const { Header, Sider, Content } = Layout;
 
 const  DefaultLayout = ({children})=> {
 
+  const {cartItems} = useSelector(state => state.rootReducer)
   const [collapsed,setCollapsed] = useState(false)
   //change class based component to functional components
   // state = {
@@ -68,6 +72,11 @@ const  DefaultLayout = ({children})=> {
                 onClick: toggle,
               }
             )}
+
+            <div className="cart-item">
+              <p>{cartItems.length}</p>
+              <ShoppingCartOutlined/>
+            </div>
           </Header>
           <Content
             className="site-layout-background"

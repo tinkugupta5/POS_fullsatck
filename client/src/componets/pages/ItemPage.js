@@ -7,8 +7,6 @@ const itemPage = () => {
     <DefaultLayout>
       <h1>Item Page</h1>
       </DefaultLayout>
-     
-    
   )
 }
 

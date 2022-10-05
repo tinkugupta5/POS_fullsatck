@@ -28,16 +28,12 @@ app.use(morgan("dev"));
 // app.get('/' ,(req,res) => {
 //     res.send("<h1>POS BACKEND</h1>");
 // });
-
 app.use('/api/items', require('./routes/itemRoutes'));
-
-
 
 //port
 const PORT = process.env.PORT || 8080;
 
 //LISTEN
-
 app.listen(PORT , () => {
     console.log(`Server Running on Port ${PORT}`.bgCyan.white);
 });

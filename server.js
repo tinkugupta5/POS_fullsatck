@@ -24,7 +24,6 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(morgan("dev"));
 
 //routes
-
 // app.get('/' ,(req,res) => {
 //     res.send("<h1>POS BACKEND</h1>");
 // });

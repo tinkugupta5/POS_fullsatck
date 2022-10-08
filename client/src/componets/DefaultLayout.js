@@ -1,8 +1,8 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { useSelector } from "react-redux";
 import { Layout, Menu } from "antd";
 import { NavLink } from "react-router-dom";
-import { rootReducer } from './redux/rootReducer';
+// import { rootReducer } from './redux/rootReducer';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -21,6 +21,7 @@ const  DefaultLayout = ({children})=> {
 
   const {cartItems} = useSelector(state => state.rootReducer)
   const [collapsed,setCollapsed] = useState(false)
+  // const dispatch =useDispatch();
   //change class based component to functional components
   // state = {
   //   collapsed: false,
@@ -31,6 +32,13 @@ const  DefaultLayout = ({children})=> {
       !collapsed,
     );
   };
+
+  //TO GET localstorage data
+
+  useEffect(()=>{
+      localStorage.setItem('cartItem',JSON.stringify(cartItems))
+  },[cartItems])
+
 
   
     return (

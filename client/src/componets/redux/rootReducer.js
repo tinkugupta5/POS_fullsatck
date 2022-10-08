@@ -1,10 +1,16 @@
 const intialState = {
     loading:false,
-    cartItem:[]
+    cartItems:[]
 }
 export const rootReducer = (state=intialState,action) => {
 
     switch(action.type) {
+        case 'updateCart':
+            return{
+                ...state,
+                //full fill cart item with payload 
+                cartItems:[...state.cartItems,action.payload]
+            }
         default:return state;
     }
 };

@@ -1,9 +1,19 @@
 import React from 'react'
 import { Button, Card } from 'antd';
+import { useDispatch } from 'react-redux';
 
 
 
 const ItemList = ({item}) => {
+  const dispatch = useDispatch()
+  //update cart handler 
+  const handleAddToCart = () => {
+    dispatch({
+      type:'updateCart',
+      payload:item,
+    })
+
+  }
   const { Meta } = Card;
   return (
     <div>
@@ -15,7 +25,7 @@ const ItemList = ({item}) => {
   >
     <Meta title={item.name} description="" />
     <div class='item-button'>
-    <Button>Add to cart</Button>
+    <Button onClick={() => handleAddToCart()} >Add to cart</Button>
     </div>
   </Card>
     </div>

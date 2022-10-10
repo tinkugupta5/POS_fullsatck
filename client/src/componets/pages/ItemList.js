@@ -9,7 +9,7 @@ const ItemList = ({item}) => {
   //update cart handler 
   const handleAddToCart = () => {
     dispatch({
-      type:'updateCart',
+      type:'Add_TO_CART',
       payload:item,
     })
 

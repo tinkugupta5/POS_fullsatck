@@ -5,7 +5,7 @@ const intialState = {
 export const rootReducer = (state=intialState,action) => {
 
     switch(action.type) {
-        case 'updateCart':
+        case 'Add_TO_CART':
             return{
                 ...state,
                 //full fill cart item with payload 

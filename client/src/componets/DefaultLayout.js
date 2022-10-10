@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { useSelector } from "react-redux";
 import { Layout, Menu } from "antd";
-import { NavLink } from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
 // import { rootReducer } from './redux/rootReducer';
 import {
   MenuUnfoldOutlined,
@@ -18,7 +18,7 @@ import "../styles/DefaultLayout.css";
 const { Header, Sider, Content } = Layout;
 
 const  DefaultLayout = ({children})=> {
-
+  const navigate = useNavigate();
   const {cartItems} = useSelector(state => state.rootReducer)
   const [collapsed,setCollapsed] = useState(false)
   // const dispatch =useDispatch();
@@ -81,7 +81,7 @@ const  DefaultLayout = ({children})=> {
               }
             )}
 
-            <div className="cart-item">
+            <div className="cart-item d-flex justify-content-space-between flex-row" onClick={()=>navigate('/cart')}>
               <p>{cartItems.length}</p>
               <ShoppingCartOutlined/>
             </div>

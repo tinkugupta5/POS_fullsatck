@@ -20,7 +20,6 @@ const CartPage = () => {
          {title:'Action', dataIndex:"_id",render:(id,record)=> <DeleteOutlined/>}
   
       ];
-
   return (
     <DefaultLayout>
    <Table columns={columns} dataSource={cartItems} bordered/>

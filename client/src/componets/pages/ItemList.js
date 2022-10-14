@@ -12,6 +12,8 @@ const ItemList = ({item}) => {
       type:'Add_TO_CART',
       payload:{...item,quantity:1},
     })
+    
+    
 
   }
   const { Meta } = Card;

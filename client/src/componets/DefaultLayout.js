@@ -15,12 +15,18 @@ import {
 } from "@ant-design/icons";
 import "../styles/DefaultLayout.css";
 
+
+
+
+
+    
 const { Header, Sider, Content } = Layout;
 
 const  DefaultLayout = ({children})=> {
   const navigate = useNavigate();
   const {cartItems} = useSelector(state => state.rootReducer)
   const [collapsed,setCollapsed] = useState(false)
+
   // const dispatch =useDispatch();
   //change class based component to functional components
   // state = {

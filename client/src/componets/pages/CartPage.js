@@ -13,12 +13,12 @@ const CartPage = () => {
          { title: 'Image', dataIndex: 'image',render:(image,record) => <img src={image} alt={record.name} height="60" width="60"/>},
          {title:'Price',dataIndex:'price'},
          {title:'Quantity', dataIndex:'_id',render:(id,record) => <div>
-            <PlusCircleOutlined className='mx-3'/>
+            <PlusCircleOutlined className='mx-3' style={{cursor:'pointer'}}/>
             <b>{record.quantity}</b>
             <MinusCircleOutlined className='mx-3'/>
          </div>},
          {title:'Action', dataIndex:"_id",render:(id,record)=> <DeleteOutlined/>}
-  
+    
       ];
   return (
     <DefaultLayout>

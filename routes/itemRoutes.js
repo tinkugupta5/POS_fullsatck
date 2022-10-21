@@ -7,7 +7,6 @@ const router = express.Router()
 // import from controller second param like /get-item,second one from controller
 
 //method-get
-
 router.get('/get-item',getItemController)
 
 //method - POST

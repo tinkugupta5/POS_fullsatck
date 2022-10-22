@@ -45,8 +45,6 @@ const  DefaultLayout = ({children})=> {
       localStorage.setItem('cartItem',JSON.stringify(cartItems))
   },[cartItems])
 
-
-  
     return (
       <Layout>
 

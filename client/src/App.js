@@ -6,7 +6,6 @@ import Homepage from './componets/pages/Homepage';
 import ItemPage from './componets/pages/ItemPage';
 import CartPage from './componets/pages/CartPage';
 
-
 function App() {
   return (
     <>
